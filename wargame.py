@@ -1,5 +1,5 @@
 
-from .vikingsClasses import Soldier, Viking, Saxon, War
+from vikingsClasses import Soldier, Viking, Saxon, War
 import random
 
 
@@ -8,8 +8,7 @@ soldier_names = ["albert","andres","archie","dani", "david","gerard","german","g
 
 #Create 5 Vikings
 for i in range(0,5):
-    if i:
-        War.addViking(Viking(soldier_names[random.randint(0,9)],100,random.randint(0,100)))
+    War.addViking(Viking(soldier_names[random.randint(0,9)],100,random.randint(0,100)))
 
 #Create 5 Saxons
 for i in range(0,5):
