@@ -59,24 +59,53 @@ class Saxon(Soldier):
 
 # Davicente
 
-#class War():
-    #def __init__(self):
+class War():
+    def __init__(self):
         # your code here
+        self.vikingArmy = []
+        self.saxonArmy = []
 
-    #def addViking(self, viking):
+    def addViking(self, viking):
         # your code here
+        self.viking=viking
+        self.vikingArmy.append(viking)
     
-    #def addSaxon(self, saxon):
+    def addSaxon(self, saxon):
         # your code here
-    
-    #def vikingAttack(self):
-        # your code here
-    
-    #def saxonAttack(self):
-        # your code here
+        self.saxon=saxon
+        self.saxonArmy.append(saxon)
 
-    #def showStatus(self):
+    
+    def vikingAttack(self):
         # your code here
+        saxon=random.choice(self.saxonArmy)
+        viking=random.choice(self.vikingArmy)
+        
+        result_viking_attack=saxon.receiveDamage(viking.strength)
+        if saxon.health<=0:
+            self.saxonArmy.remove(saxon)
+        
+        return result_viking_attack
+    
+    def saxonAttack(self):
+        # your code here
+        saxon=random.choice(self.saxonArmy)
+        viking=random.choice(self.vikingArmy)
+        
+        result_saxon_attack=viking.receiveDamage(saxon.strength)
+        if viking.health<=0:
+            self.vikingArmy.remove(viking)
+        
+        return result_saxon_attack
+
+    def showStatus(self):
+        # your code here
+        if len(self.saxonArmy)==0:
+            return f"Vikings have won the war of the century!"
+        elif len(self.vikingArmy)==0:
+            return f"Saxons have fought for their lives and survive another day..."
+        else: 
+            return f"Vikings and Saxons are still in the thick of battle."
     #pass
 
 #yop
