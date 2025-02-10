@@ -41,7 +41,7 @@ Entonces, digamos que ya has creado la clase para los Soldados.
 3. En tu terminal, ejecuta el archivo de prueba para esa clase.
 
 ```bash
-$ python3 1-testsSoldier.py --v
+$ python3 1-testSoldier.py --v
 ```
 
 ### Prueba correcta
